@@ -24,7 +24,7 @@ new Vue({
     }
   },
   methods: {
-    deleteRandomMap() {
+    deleteRandomMap: function() {
       const indexToDelete = Math.floor(Math.random() * this.tracks.length);
       this.tracks.splice(indexToDelete, 1)
     }

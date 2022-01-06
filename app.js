@@ -1,9 +1,8 @@
 new Vue({
   el: '#app',
   vuetify: new Vuetify(),
-  data() {
-    return {
-      title: 'This is a track picker for ACC GT Series',
+  data: {
+    title: 'This is a track picker for ACC GT Series',
       tracks: [
         {
           title: 'Barcelona',
@@ -21,7 +20,6 @@ new Vue({
           img: 'https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Germany_Circuit.png.transform/9col/image.png'
         },
       ]
-    }
   },
   methods: {
     deleteRandomMap: function() {

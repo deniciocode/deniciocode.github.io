@@ -5,18 +5,51 @@
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="app">
     <v-app>
-      <v-main>
-        <v-container>Hello world</v-container>
+      <v-main class='mx-auto'>
+        <img id=logo height=300px src="https://cdn.discordapp.com/attachments/794142371515990036/926507662047322153/Logo_ACC_Gtseries_solo.png">
+
+        <v-row class=tracks>
+          <v-card v-for='track in tracks'
+                  class="our-card"
+
+              max-width="344"
+              >
+              <v-img
+                  v-bind:src="track.img"
+                  height="200px"
+                  ></v-img>
+
+              <v-card-title>
+                {{ track.title }}
+              </v-card-title>
+
+            <v-card-subtitle>
+              {{ track.length }} km
+            </v-card-subtitle>
+          </v-card>
+        </v-row>
+
+        <v-btn @click="deleteRandomMap"
+               v-if="tracks.length > 1"
+               >
+          Eliminate
+        </v-btn>
       </v-main>
     </v-app>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js">
+  </script>
+
   <script src="app.js">
   </script>
 </body>

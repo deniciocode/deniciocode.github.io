@@ -5,19 +5,19 @@ new Vue({
     title: 'This is a track picker for ACC GT Series',
       tracks: [
         {
-          title: 'Barcelona',
-          length: '4.6',
-          img: 'https://racetrackart.de/media/catalog/product/cache/1/thumbnail/960x/17f82f742ffe127f42dca9de82fb58b1/c/a/catalunya_spain_1024x768.jpg',
+          title: 'Monza',
+          length: '5.7',
+          img: 'https://cdn.discordapp.com/attachments/826345100031819787/929131992505802872/Monza.JPG',
         },
         {
-          title: 'Silverstone',
-          length: '6.4',
-          img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Circuit_Silverstone_2011.svg/1280px-Circuit_Silverstone_2011.svg.png'
+          title: 'Misano',
+          length: '4.2',
+          img: 'https://cdn.discordapp.com/attachments/826345100031819787/929131992275095623/Misano.JPG'
         },
         {
-          title: 'Nürburgring',
-          length: '5.1',
-          img: 'https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Germany_Circuit.png.transform/9col/image.png'
+          title: 'Kyalami',
+          length: '4.5',
+          img: 'https://cdn.discordapp.com/attachments/826345100031819787/929131992023445544/Kyalami.JPG'
         },
       ]
   },

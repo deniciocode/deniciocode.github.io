@@ -1,57 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js">
-  </script>
+  <script src="https://unpkg.com/vue@next"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js">
   </script>
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="app">
-    <v-app>
-      <v-main class='mx-auto'>
         <img id=logo height=300px
         src="https://cdn.discordapp.com/attachments/794142371515990036/926507662047322153/Logo_ACC_Gtseries_solo.png">
 
-        <v-row class=tracks>
-          <v-card v-for='track in tracks'
-                  class="our-card"
+        <div class='row tracks'>
+          <div v-for='track in tracks' :key='track.title'
+               class="our-card"
 
               max-width="344"
               >
-              <v-img
-                  v-bind:src="track.img"
-                  height="200px"
-                  ></v-img>
+              <img :src="track.img" height="200px"></img>
 
-              <v-card-title>
+              <span class="title">
                 {{ track.title }}
-              </v-card-title>
+              </span>
 
-            <v-card-subtitle>
-              {{ track.length }} km
-            </v-card-subtitle>
-          </v-card>
-        </v-row>
+              <span class='length'>
+                {{ track.length }} km
+              </span>
+          </div>
+        </div>
 
-        <v-btn @click="deleteRandomMap"
+        <button @click="deleteRandomMap"
                v-if="tracks.length > 1"
                >
           Eliminate
-        </v-btn>
-      </v-main>
-    </v-app>
+        </button>
   </div>
 
 
-  <script src="app.js">
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>

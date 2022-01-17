@@ -26,7 +26,7 @@
     <p-image src="https://cdn.discordapp.com/attachments/794142371515990036/926507662047322153/Logo_ACC_Gtseries_solo.png"
              alt="ACC GT Series Logo" width="400"></p-image>
 
-    <div class=flex-container>
+    <div v-if='started' class=flex-container >
       <p-card v-for='track in tracks' :key='track.title'
               class='our-card'>
         <template #header>
@@ -41,11 +41,27 @@
       </p-card>
 
     </div>
+
+    <div v-if='!started'>
+      <div class="p-field">
+        <p-inputnumber id="vertical" v-model="randomRunner"
+                                     mode="decimal"
+                                     show-buttons
+                                     button-layout="vertical"
+                                     style="width:4rem">
+      </div>
+      <p-button @click='repeatRandomSetup'>Belegen</p-button>
+    </div>
+
+    <div v-else>
       <p-button @click="deleteRandomMap"
                 v-if="tracks.length > 1"
-      >
+                class='p-button-danger'
+                >
         Eliminate
       </p-button>
+    </div>
+
   </div>
 
 

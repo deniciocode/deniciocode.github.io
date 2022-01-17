@@ -1,5 +1,5 @@
-#logo {
-  padding-bottom: 40px;
+#app {
+  text-align: center;
 }
 
 .tracks {
@@ -10,6 +10,15 @@
 
 .our-card {
   flex: 1 1 auto;
-  border: 1px red solid;
   margin: 5px;  /* and that, will result in a 10px gap */
+  max-width: 25rem;
+  margin-bottom: 2em
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-around;
 }

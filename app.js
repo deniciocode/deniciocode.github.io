@@ -17,6 +17,11 @@ const racetracks = [
 ]
 const app = Vue.createApp({
   el: '#app',
+  components: {
+    "p-card": primevue.card,
+    "p-button": primevue.button,
+    'p-image': primevue.image
+  },
   data() {
     return {
       title: 'This is a track picker for ACC GT Series',
@@ -31,4 +36,5 @@ const app = Vue.createApp({
   }
 })
 
+app.use(primevue.config.default)
 app.mount('#app')

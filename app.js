@@ -44,7 +44,6 @@ const app = Vue.createApp({
       let copyOfTracks = [...racetracks]
       this.tracks = []
       for (let i = 0; i < len; i++) {
-        console.log('for real')
         const indexToDelete = Math.floor(Math.random() * (len - i));
         let track = copyOfTracks.splice(indexToDelete, 1)
         this.tracks.push(track[0])

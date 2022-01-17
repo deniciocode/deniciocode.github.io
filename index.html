@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <title>ACC GT Series - Trackpicker</title>
+
+  <!-- PrimeVue -->
+  <link href="https://unpkg.com/primevue@^3/resources/themes/saga-blue/theme.css" rel="stylesheet" />
+  <link href="https://unpkg.com/primevue@^3/resources/primevue.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/primeflex@2.0.0/primeflex.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/primeicons/primeicons.css" rel="stylesheet" />
+
+
   <script src="https://unpkg.com/vue@next"></script>
 
-  </script>
+  <script src="https://unpkg.com/primevue@^3/core/core.min.js"></script>
+     <script src="https://unpkg.com/primevue@^3/image/image.min.js"></script>
+  <script src="https://unpkg.com/primevue@^3/card/card.min.js"></script>
+
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="app">
-        <img id=logo height=300px
-        src="https://cdn.discordapp.com/attachments/794142371515990036/926507662047322153/Logo_ACC_Gtseries_solo.png">
+    <p-image src="https://cdn.discordapp.com/attachments/794142371515990036/926507662047322153/Logo_ACC_Gtseries_solo.png"
+             alt="ACC GT Series Logo" width="400"></p-image>
 
-        <div class='row tracks'>
-          <div v-for='track in tracks' :key='track.title'
-               class="our-card"
+    <div class=flex-container>
+      <p-card v-for='track in tracks' :key='track.title'
+              class='our-card'>
+        <template #header>
+          <img :src="track.img" width="500px"></img>
+        </template>
+        <template #title>
+          {{ track.title }}
+        </template>
+        <template #content>
+          <p> {{ track.length }} km</p>
+        </template>
+      </p-card>
 
-              max-width="344"
-              >
-              <img :src="track.img" height="200px"></img>
-
-              <span class="title">
-                {{ track.title }}
-              </span>
-
-              <span class='length'>
-                {{ track.length }} km
-              </span>
-          </div>
-        </div>
-
-        <button @click="deleteRandomMap"
-               v-if="tracks.length > 1"
-               >
-          Eliminate
-        </button>
+    </div>
+      <p-button @click="deleteRandomMap"
+                v-if="tracks.length > 1"
+      >
+        Eliminate
+      </p-button>
   </div>
 
 

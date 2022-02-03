@@ -1,18 +1,23 @@
 const racetracks = [
   {
-    title: 'Monza',
-    length: '5.7',
-    img: 'https://cdn.discordapp.com/attachments/826345100031819787/932722406286585917/Monza.JPG',
+    title: 'Snetterton',
+    length: '4.7',
+    img: 'https://cdn.discordapp.com/attachments/826345100031819787/938513530737541130/Snetterton.JPG',
   },
   {
-    title: 'Misano',
+    title: 'Zandvoort',
     length: '4.2',
-    img: 'https://cdn.discordapp.com/attachments/826345100031819787/932722406022336532/Misano.JPG'
+    img: 'https://cdn.discordapp.com/attachments/826345100031819787/938513531005968464/Zandvoort.JPG'
   },
   {
-    title: 'Kyalami',
-    length: '4.5',
-    img: 'https://cdn.discordapp.com/attachments/826345100031819787/932722405707767918/Kyalami.JPG'
+    title: 'Hungaroring',
+    length: '4.4',
+    img: 'https://cdn.discordapp.com/attachments/826345100031819787/938513531266007040/Hungaroring.JPG'
+  },
+  {
+    title: 'Oulton Park',
+    length: '4.3',
+    img: 'https://cdn.discordapp.com/attachments/826345100031819787/938513531492519986/Oulton_Park.JPG'
   },
 ]
 const app = Vue.createApp({

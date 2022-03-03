@@ -1,23 +1,23 @@
 const racetracks = [
   {
-    title: 'Spa-Francorchamps',
+    title: 'Donington Park',
     length: '7.0',
-    img: 'https://cdn.discordapp.com/attachments/912445486877790238/943533510260559902/Spa.jpg',
+    img: 'https://cdn.discordapp.com/attachments/826345100031819787/948512891957563433/DoningtonPark.JPG',
   },
   {
-    title: 'Suzuka',
+    title: 'Laguna Seca',
     length: '5.8',
-    img: 'https://cdn.discordapp.com/attachments/912445486877790238/943533510029897759/Suzuka.jpg'
+    img: 'https://cdn.discordapp.com/attachments/826345100031819787/948512892209201172/LagunaSeca.JPG'
   },
   {
-    title: 'Paul Ricard',
+    title: 'Brands Hatch',
     length: '5.8',
-    img: 'https://cdn.discordapp.com/attachments/912445486877790238/943533510529007756/Paul_Ricard.jpg'
+    img: 'https://cdn.discordapp.com/attachments/826345100031819787/948512892427329556/BrandsHatch.JPG'
   },
   {
-    title: 'Mount Panorama',
+    title: 'Zolder',
     length: '6.2',
-    img: 'https://cdn.discordapp.com/attachments/912445486877790238/943533510742929438/Mount_Panorama.jpg'
+    img: 'https://cdn.discordapp.com/attachments/826345100031819787/948512892670591036/Zolder.JPG'
   },
 ]
 const app = Vue.createApp({
